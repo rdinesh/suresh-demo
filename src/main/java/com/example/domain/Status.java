@@ -17,5 +17,8 @@ public class Status {
 		this.message = message;
 	}
 	
-	
+	public String toString()
+	{
+		return "Status: " + code + " " + message;
+	}
 }

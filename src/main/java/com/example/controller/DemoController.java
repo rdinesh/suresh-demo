@@ -15,8 +15,8 @@ import com.example.domain.TransactionContext;
 @RestController
 public class DemoController {
 	
-	/*
-	@RequestMapping(value="/demo/trans",produces=MediaType.APPLICATION_JSON_VALUE,
+	
+	@RequestMapping(value="/demo/transaction",produces=MediaType.APPLICATION_JSON_VALUE,
 			consumes=MediaType.APPLICATION_JSON_VALUE,method=RequestMethod.POST)
 	public ResponseEntity<Status> addTransaction(@RequestBody TransactionContext transaction)
 	{
@@ -24,8 +24,9 @@ public class DemoController {
 		
 		Status s = new Status();
 		s.setMessage("success");
+		s.setCode(HttpStatus.CREATED.toString());
 		return new ResponseEntity<Status>(s,HttpStatus.CREATED);
-	}*/
+	}
 
 	@RequestMapping(value="/test", method=RequestMethod.GET)
 	public String test(){
